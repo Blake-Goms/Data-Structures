@@ -101,6 +101,6 @@ class BinarySearchTreeTests(unittest.TestCase):
         self.assertEqual(output, "2\n4\n3\n6\n7\n5\n8\n1\n")
 
         sys.stdout = stdout_  # Restore stdout
-
+        
 if __name__ == '__main__':
     unittest.main()
