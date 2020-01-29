@@ -53,10 +53,16 @@ class BinarySearchTree:
     # Call the function `cb` on the value of each node
     # You may use a recursive or iterative approach
     def for_each(self, cb):
+        # this is the base case. it is your current node
         cb(self.value)
-        cb(self.left)
-        cb(self.right)
-        return self.for_each(cb)
+        # if left isn't None, you can keep going left. 
+        if self.left != None:
+            # this will push us to the next left node, and run it again until cant go left
+            self.left.for_each(cb)
+        # once the above finishes going left, this will start to go right
+        if self.right != None:
+            # this will push us to the next left right, and run it again until cant go right
+            self.right.for_each(cb)
 
 
     # DAY 2 Project -----------------------
